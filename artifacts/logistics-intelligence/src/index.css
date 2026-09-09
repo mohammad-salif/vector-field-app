@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: theme('colors.neutral.50');
+    color: theme('colors.neutral.900');
+  }
+
+  :focus-visible {
+    outline: 2px solid theme('colors.neutral.900');
+    outline-offset: 2px;
+  }
+
+  /* Custom subtle scrollbars for dense data views */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: theme('colors.neutral.300');
+    border-radius: 9999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: theme('colors.neutral.400');
+  }
+}

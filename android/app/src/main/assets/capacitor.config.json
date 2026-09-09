@@ -1,0 +1,8 @@
+{
+	"appId": "gov.in.logistics.field",
+	"appName": "Logistics Intelligence Field",
+	"webDir": "dist",
+	"server": {
+		"androidScheme": "https"
+	}
+}

@@ -1,0 +1,31 @@
+{
+  "name": "workspace",
+  "version": "0.0.0",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "artifacts/*",
+    "lib/*",
+    "scripts"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=@workspace/logistics-intelligence",
+    "build": "npm run build --workspace=@workspace/logistics-intelligence",
+    "serve": "npm run serve --workspace=@workspace/logistics-intelligence",
+    "lint": "npm run typecheck --workspace=@workspace/logistics-intelligence"
+  },
+  "dependencies": {
+    "@capacitor/android": "^8.5.1",
+    "@capacitor/cli": "^8.5.1",
+    "@capacitor/core": "^8.5.1",
+    "@maptiler/sdk": "^4.1.0",
+    "@replit/connectors-sdk": "^0.4.1"
+  },
+  "devDependencies": {
+    "prettier": "^3.9.6",
+    "typescript": "~5.9.3"
+  },
+  "overrides": {
+    "esbuild": "^0.25.0"
+  }
+}

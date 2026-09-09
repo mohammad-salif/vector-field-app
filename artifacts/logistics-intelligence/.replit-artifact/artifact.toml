@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Logistics Intelligence"
+description = "A fleet operations dashboard for monitoring live vehicle locations, routes, incidents, deliveries, and vehicle performance in a simulated logistics environment."
+version = "1.0.0"
+id = "artifacts/logistics-intelligence"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 18441
+
+[services.development]
+run = "pnpm --filter @workspace/logistics-intelligence run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/logistics-intelligence", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/logistics-intelligence/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "18441"
+BASE_PATH = "/"

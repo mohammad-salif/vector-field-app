@@ -1,0 +1,10 @@
+{
+  "name": "Remix Remix Smart Logistics Field User",
+  "description": "Smart logistics field operations portal with offline-first delivery tracking, incident reporting, route navigation, and sync management.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
